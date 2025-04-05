@@ -1,0 +1,36 @@
+/*navegação*/
+.navegacao{
+    display: flex;
+}
+.navegacao {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    padding: 10px 0;         /* Espaçamento interno (opcional) */
+    background-color: #f8f8f8; /* Cor de fundo (opcional) */
+}
+
+.navegacao nav ul {
+    display: flex;           /* Alinha os itens horizontalmente */
+    list-style: none;        /* Remove os marcadores (bolinhas) */
+    padding: 0;              /* Remove padding padrão */
+    margin: 0;               /* Remove margem padrão */
+    gap: 10px;               /* Espaço entre os itens */
+}
+
+.navegacao nav ul li {
+    padding: 8px 16px;       /* Espaçamento interno dos itens */
+    cursor: pointer;         /* Muda o cursor para pointer */
+    transition: 0.3s;        /* Efeito de transição suave */
+}
+
+.navegacao nav ul li:hover {
+    color: #007bff;          /* Cor ao passar o mouse (opcional) */
+    transform: scale(1.5);  /* Efeito de zoom leve (opcional) */
+}
+
+/* Estilo para os separadores "|" (opcional) */
+.navegacao nav ul li:nth-child(even) {
+    color: #ccc;            /* Cor mais clara para os separadores */
+    cursor: default;        /* Remove o cursor pointer dos separadores */
+}
