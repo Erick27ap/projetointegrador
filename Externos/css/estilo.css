@@ -5,6 +5,8 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
+
 /* Estilização da sessão de categorias*/
 .categorias{
     display: flex;
@@ -12,26 +14,32 @@
     flex-direction: column; /*alinha os itens em coluna*/
     align-items: center; /*alinha verticalmente*/
     justify-content: center; /*alinha horizontalmente*/
-    height: 500px; /*Autura*/
-    width: 1440; /*largura*/
+    /*height: 500px; /*Autura*/
+    /*swidth: 1440; /*largura*/
     gap: 10px; /*espaçamento entre oa itens*/
     letter-spacing: 0.1rem; /*espaço entre as letras*/
+    
+
 }
+
 .categorias .titulo-produto{
     /* background-color: blueviolet; */
     padding: 20px;
     font-size: larger;
 }
+
+
 /* Estilização das caxas de produtos */
 .cat-produtos{
     display: flex;
     gap: 20px;
-    width: 1000px;
+    width: auto;
+    /*height: auto;
     /* background-color: aqua; */
 }
 img{
-    height: 150px;;
-    width: auto;
+    max-width: 50%; /* a imagem não ultrapassa a largura da div */
+    height: auto; /* mantém a proporção */
 }
 .item-produto{
     /* background-color:tomato; */
@@ -48,7 +56,7 @@ img{
 }
 .item-produto:hover {
     border-color: #964B00; /* muda a cor da borda ao passar o mouse */
-    transform: scale(1.02); /* efeito de zoom sutil */
+    transform: scale(1.10); /* efeito de zoom */
     transition: all 0.3s; /* suaviza a animação */
     /* background-color: rgb(219, 187, 192); */
 }
@@ -68,8 +76,25 @@ img{
 }
 .lista-produtos{
     display: flex;
+
+    overflow-x: auto; /* Habilita scroll horizontal */
+    gap: 16px; /* Espaço entre os itens */
+    padding: 16px 0; /* Espaçamento interno (opcional) */
+    scrollbar-width: thin; /* Estilo da barra de rolagem (Firefox) */
+    scrollbar-color: #888 #f1f1f1; /* Cor da barra (Firefox) */
 }
+/* Personaliza a barra de rolagem (Chrome, Edge, Safari) */
+.lista-produtos::-webkit-scrollbar {
+    height: 8px;
+  }
+.lista-produtos::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+.lista-produtos::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
 .lista-produtos .item-produto{
-    gap: 5px;
-    margin: 10px;
+    gap: 10px;
+    margin: 20px;
 }
